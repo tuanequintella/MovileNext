@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/theme_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/theme_colorPrimaryDark</item>
+        <item name="colorAccent">@color/theme_colorAccent</item>
+        <item name="android:textColor">@color/theme_textColor</item>
+        <item name="android:textColorPrimary">@color/theme_textColorPrimary</item>
+        <item name="android:windowBackground">@color/theme_windowBackground</item>
+    </style>
+
+    <style name="AppTheme.Card" parent="CardView">
+        <item name="cardCornerRadius">@dimen/default_card_corner_radius</item>
+        <item name="android:background">@color/default_background_second</item>
+        <item name="android:layout_marginRight">@dimen/default_spacing_large</item>
+        <item name="android:layout_marginLeft">@dimen/default_spacing_large</item>
+        <item name="android:layout_marginTop">@dimen/default_spacing_medium</item>
+        <item name="android:layout_marginBottom">@dimen/default_spacing_medium</item>
+    </style>
+
+    <style name="AppTheme.Card.Content" parent="CardView">
+        <item name="android:layout_margin">@dimen/default_spacing_large</item>
+    </style>
+    <!-- TO BE CONTINUED -->
+
+</resources>

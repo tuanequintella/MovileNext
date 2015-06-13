@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_background_first"
+    tools:context=".EpisodeDetailsActivity">
+
+    <ImageView
+        android:id="@+id/episode_screenshot"
+        android:src="@drawable/show_item_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="248dp"
+        android:scaleType="centerCrop" />
+
+    <TextView android:text="@string/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/episode_datetime"
+        android:style="@style/AppTheme.Card"
+        android:layout_below="@+id/episode_screenshot"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_gravity="center" >
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:style="@style/AppTheme.Card.Content">
+
+            <ImageView
+                android:id="@+id/episode_details_clock"
+                android:src="@drawable/episode_details_clock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="@string/episode_datetime"
+                android:style="@style/AppTheme.Card.Content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

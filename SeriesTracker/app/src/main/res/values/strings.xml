@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Series Tracker</string>
+
+    <!-- Base Navigation -->
+    <string name="base_navigation_drawer_open">Open</string>
+    <string name="base_navigation_drawer_close">Close</string>
+
+    <string name="episode_datetime">2015-04-22 at 22:00</string>
+
+    <!-- TO BE CONTINUED -->
+
+</resources>
