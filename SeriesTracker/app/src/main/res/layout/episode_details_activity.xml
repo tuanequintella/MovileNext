@@ -21,14 +21,15 @@
             style="@style/AppTheme.EpisodeDetails.EpisodeScreenshot"
             android:scaleType="fitXY" />
 
-        <TextView android:text="@string/episode_title"
+        <TextView android:id="@+id/episode_title"
+            android:text="@string/episode_title"
             style="@style/AppTheme.EpisodeDetails.EpisodeTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/episode_screenshot" />
 
         <android.support.v7.widget.CardView
-            android:id="@+id/episode_datetime"
+            android:id="@+id/episode_datetime_card"
             style="@style/AppTheme.EpisodeDetails.Card"
             android:layout_below="@+id/episode_screenshot"
             android:layout_width="match_parent"
@@ -48,7 +49,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent" />
 
-                <TextView
+                <TextView android:id="@+id/episode_datetime"
                     android:text="@string/episode_datetime"
                     style="@style/AppTheme.EpisodeDetails.DatetimeText"
                     android:layout_width="wrap_content"
@@ -59,9 +60,9 @@
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/episode_summary_title"
+            android:id="@+id/episode_summary_card"
             style="@style/AppTheme.EpisodeDetails.Card"
-            android:layout_below="@+id/episode_datetime"
+            android:layout_below="@+id/episode_datetime_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center" >
@@ -83,7 +84,7 @@
                     android:layout_height="1dp"
                     style="@style/AppTheme.EpisodeDetails.Separator" />
 
-                <TextView
+                <TextView android:id="@+id/episode_summary"
                     android:text="@string/episode_summary"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
