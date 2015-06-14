@@ -6,22 +6,64 @@
         <item name="colorPrimary">@color/theme_colorPrimary</item>
         <item name="colorPrimaryDark">@color/theme_colorPrimaryDark</item>
         <item name="colorAccent">@color/theme_colorAccent</item>
+        <item name="android:fontFamily">sans-serif</item>
         <item name="android:textColor">@color/theme_textColor</item>
         <item name="android:textColorPrimary">@color/theme_textColorPrimary</item>
         <item name="android:windowBackground">@color/theme_windowBackground</item>
     </style>
 
-    <style name="AppTheme.Card" parent="CardView">
+    <style name="AppTheme.EpisodeDetails"></style>
+
+    <style name="AppTheme.EpisodeDetails.EpisodeScreenshot">
+        <item name="android:layout_height">248dp</item>
+        <item name="android:layout_marginBottom">@dimen/default_spacing_medium</item>
+    </style>
+
+    <style name="AppTheme.EpisodeDetails.EpisodeTitle">
+        <item name="android:textSize">24dp</item>
+        <item name="android:textColor">@color/theme_textColorPrimary</item>
+        <item name="android:layout_margin">@dimen/default_spacing_large</item>
+        <item name="android:paddingRight">72dp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="AppTheme.EpisodeDetails.Card" parent="CardView">
         <item name="cardCornerRadius">@dimen/default_card_corner_radius</item>
         <item name="android:background">@color/default_background_second</item>
         <item name="android:layout_marginRight">@dimen/default_spacing_large</item>
         <item name="android:layout_marginLeft">@dimen/default_spacing_large</item>
-        <item name="android:layout_marginTop">@dimen/default_spacing_medium</item>
+        <item name="android:layout_marginTop">@dimen/default_spacing_small</item>
+        <item name="android:layout_marginBottom">@dimen/default_spacing_small</item>
+    </style>
+
+    <style name="AppTheme.EpisodeDetails.Card.Content" parent="CardView">
+        <item name="android:layout_margin">@dimen/default_spacing_large</item>
+    </style>
+
+    <style name="AppTheme.EpisodeDetails.DatetimeText">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/default_textColor_second</item>
+        <item name="android:layout_marginLeft">@dimen/default_spacing_large</item>
+    </style>
+
+    <style name="AppTheme.EpisodeDetails.SummaryTitle">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/default_textColor_third</item>
+        <item name="android:textAllCaps">true</item>
         <item name="android:layout_marginBottom">@dimen/default_spacing_medium</item>
     </style>
 
-    <style name="AppTheme.Card.Content" parent="CardView">
-        <item name="android:layout_margin">@dimen/default_spacing_large</item>
+    <style name="AppTheme.EpisodeDetails.Summary">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/default_textColor_fourth</item>
+    </style>
+
+    <style name="AppTheme.EpisodeDetails.Separator">
+        <item name="android:background">@color/default_background_third</item>
+        <item name="android:layout_marginBottom">@dimen/default_spacing_medium</item>
     </style>
     <!-- TO BE CONTINUED -->
 

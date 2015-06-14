@@ -7,7 +7,10 @@
     <string name="base_navigation_drawer_open">Open</string>
     <string name="base_navigation_drawer_close">Close</string>
 
+    <string name="episode_title">Some episode name as a placeholder here</string>
     <string name="episode_datetime">2015-04-22 at 22:00</string>
+    <string name="episode_summary_title">Summary</string>
+    <string name="episode_summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum purus vel mollis interdum. Ut ut enim eget sem porttitor fermentum quis vitae massa. In ac diam justo. Nunc pellentesque lectus et ligula pretium porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur ut ante rhoncus, vehicula mauris sit amet, lobortis erat. Morbi sagittis dui dictum, consectetur eros ut, dapibus dolor. Mauris ante nulla, feugiat eget elementum non, aliquam eu libero. Nam lacinia condimentum elit, non feugiat urna elementum id. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus tortor, efficitur sed libero id, lobortis pellentesque velit. Aliquam at tortor fringilla, finibus diam sit amet, consectetur elit.</string>
 
     <!-- TO BE CONTINUED -->
 
