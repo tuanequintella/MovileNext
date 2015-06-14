@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import com.movile.next.seriestracker.R;
 import com.movile.next.seriestracker.business.FetchLocalEpisodeDetails;
+import com.movile.next.seriestracker.business.FetchRemoteEpisodeLoaderCallback;
 import com.movile.next.seriestracker.model.Episode;
 import com.movile.next.seriestracker.util.FormatUtil;
 
@@ -18,8 +19,11 @@ public class EpisodeDetailsActivity extends Activity implements OnEpisodeLoadedL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.episode_details_activity);
-
+        // LOCAL FETCH
         new FetchLocalEpisodeDetails(this).execute(this);
+
+        // REMOTE FETCH
+        getLoaderManager().initLoader(0, null, new FetchRemoteEpisodeLoaderCallback(this)).forceLoad();
     }
 
 
