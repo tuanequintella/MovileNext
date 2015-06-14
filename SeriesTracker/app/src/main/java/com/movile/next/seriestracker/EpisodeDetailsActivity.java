@@ -1,38 +1,78 @@
 package com.movile.next.seriestracker;
 
+import android.app.Activity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class EpisodeDetailsActivity extends ActionBarActivity {
+public class EpisodeDetailsActivity extends Activity {
+
+    protected String myString;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.episode_details_activity);
+        Log.d(EpisodeDetailsActivity.class.getSimpleName(), "called onCreate()");
+
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.episode_details_menu, menu);
-        return true;
+    protected void onRestart() {
+        super.onRestart();
+        Log.d(EpisodeDetailsActivity.class.getSimpleName(), "called onRestart()");
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+    protected void onStart() {
+        super.onStart();
+        Log.d(EpisodeDetailsActivity.class.getSimpleName(), "called onStart()");
+    }
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(EpisodeDetailsActivity.class.getSimpleName(), "called onResume()");
+        if(myString != null ) {
+            Log.d(EpisodeDetailsActivity.class.getSimpleName(), "myString = " + myString);
+        }else {
+            Log.d(EpisodeDetailsActivity.class.getSimpleName(), "myString is null");
         }
+    }
 
-        return super.onOptionsItemSelected(item);
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        Log.d(EpisodeDetailsActivity.class.getSimpleName(), "called onRestoreInstanceState()");
+        super.onRestoreInstanceState(savedInstanceState);
+        myString = savedInstanceState.getString("myString");
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        Log.d(EpisodeDetailsActivity.class.getSimpleName(), "called onSaveInstanceState()");
+        myString = "lalalala";
+        outState.putString("myString", myString);
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onPause() {
+        Log.d(EpisodeDetailsActivity.class.getSimpleName(), "called onPause()");
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        Log.d(EpisodeDetailsActivity.class.getSimpleName(), "called onStop()");
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        myString = null;
+        Log.d(EpisodeDetailsActivity.class.getSimpleName(), "called onDestroy()");
+        super.onDestroy();
     }
 }
