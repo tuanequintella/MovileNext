@@ -14,22 +14,22 @@
             android:src="@drawable/highlight_placeholder"
             android:layout_width="match_parent"
             android:scaleType="centerCrop"
-            android:style="@style/AppTheme.EpisodeDetails.EpisodeScreenshot"/>
+            style="@style/AppTheme.EpisodeDetails.EpisodeScreenshot"/>
 
         <ImageView android:src="@drawable/overlay"
             android:layout_width="match_parent"
-            android:style="@style/AppTheme.EpisodeDetails.EpisodeScreenshot"
+            style="@style/AppTheme.EpisodeDetails.EpisodeScreenshot"
             android:scaleType="fitXY" />
 
         <TextView android:text="@string/episode_title"
-            android:style="@style/AppTheme.EpisodeDetails.EpisodeTitle"
+            style="@style/AppTheme.EpisodeDetails.EpisodeTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/episode_screenshot" />
 
         <android.support.v7.widget.CardView
             android:id="@+id/episode_datetime"
-            android:style="@style/AppTheme.EpisodeDetails.Card"
+            style="@style/AppTheme.EpisodeDetails.Card"
             android:layout_below="@+id/episode_screenshot"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center|start"
-                android:style="@style/AppTheme.EpisodeDetails.Card.Content">
+                style="@style/AppTheme.EpisodeDetails.Card.Content">
 
                 <ImageView
                     android:id="@+id/episode_details_clock"
@@ -60,7 +60,7 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/episode_summary_title"
-            android:style="@style/AppTheme.EpisodeDetails.Card"
+            style="@style/AppTheme.EpisodeDetails.Card"
             android:layout_below="@+id/episode_datetime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -70,24 +70,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:style="@style/AppTheme.EpisodeDetails.Card.Content">
+                style="@style/AppTheme.EpisodeDetails.Card.Content">
 
                 <TextView
                     android:text="@string/episode_summary_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:style="@style/AppTheme.EpisodeDetails.SummaryTitle" />
+                    style="@style/AppTheme.EpisodeDetails.SummaryTitle" />
                 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:style="@style/AppTheme.EpisodeDetails.Separator" />
+                    style="@style/AppTheme.EpisodeDetails.Separator" />
 
                 <TextView
                     android:text="@string/episode_summary"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:style="@style/AppTheme.EpisodeDetails.Summary" />
+                    style="@style/AppTheme.EpisodeDetails.Summary" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
