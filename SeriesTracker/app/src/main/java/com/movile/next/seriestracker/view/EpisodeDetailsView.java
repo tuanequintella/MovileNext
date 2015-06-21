@@ -1,8 +1,9 @@
-package com.movile.next.seriestracker.activity;
+package com.movile.next.seriestracker.view;
 
 import com.movile.next.seriestracker.model.Episode;
 
-public interface OnEpisodeLoadedListener {
+public interface EpisodeDetailsView {
 
     void onEpisodeLoaded(Episode episode);
+    
 }

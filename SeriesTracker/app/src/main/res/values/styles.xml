@@ -12,6 +12,7 @@
         <item name="android:windowBackground">@color/theme_windowBackground</item>
     </style>
 
+    <!-- Episode Details -->
     <style name="AppTheme.EpisodeDetails"></style>
 
     <style name="AppTheme.EpisodeDetails.EpisodeScreenshot">
@@ -65,6 +66,11 @@
         <item name="android:background">@color/default_background_third</item>
         <item name="android:layout_marginBottom">@dimen/default_spacing_medium</item>
     </style>
+
+    <!-- Season Details -->
+    <style name="AppTheme.SeasonDetails"></style>
+
+
     <!-- TO BE CONTINUED -->
 
 </resources>
