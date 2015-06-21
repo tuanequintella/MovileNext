@@ -16,6 +16,10 @@
         <activity
             android:name=".activity.SeasonDetailsActivity"
             android:label="@string/title_activity_season_details" >
+        </activity>
+        <activity
+            android:name=".activity.ShowDetailsActivity"
+            android:label="@string/title_activity_show_details" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

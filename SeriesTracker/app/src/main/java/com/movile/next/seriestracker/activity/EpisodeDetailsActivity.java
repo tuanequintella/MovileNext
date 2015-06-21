@@ -7,30 +7,54 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.movile.next.seriestracker.R;
+import com.movile.next.seriestracker.activity.base.BaseNavigationToolbarActivity;
 import com.movile.next.seriestracker.model.Episode;
 import com.movile.next.seriestracker.model.Images;
 import com.movile.next.seriestracker.presenter.EpisodeDetailsPresenter;
 import com.movile.next.seriestracker.util.FormatUtil;
 import com.movile.next.seriestracker.view.EpisodeDetailsView;
 
-public class EpisodeDetailsActivity extends Activity implements EpisodeDetailsView {
+import java.text.MessageFormat;
+
+public class EpisodeDetailsActivity extends BaseNavigationToolbarActivity implements EpisodeDetailsView {
+
+    public static final String EXTRA_SHOW = "show";
+    public static final String EXTRA_SEASON = "1";
+    public static final String EXTRA_EPISODE = "1";
 
     EpisodeDetailsPresenter mPresenter;
     TextView mTextView;
     ImageView mImageView;
+
+    private String mShow = "";
+    private Long mSeason = 1l;
+    private Long mEpisode = 1l;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.episode_details_activity);
 
+        loadBundle();
+
         // RETROFIT FETCH
         mPresenter = new EpisodeDetailsPresenter(this);
-        mPresenter.loadEpisode("game-of-thrones", Long.valueOf("3"), Long.valueOf("2"));
+        mPresenter.loadEpisode(mShow, mSeason, mEpisode);
+
+        configureToolbar();
+        getSupportActionBar().setTitle(MessageFormat.format("Episode {0}", mEpisode));
+        showLoading();
     }
 
+    public void loadBundle() {
+        Bundle bundle = getIntent().getExtras();
+        mShow = bundle.getString(EXTRA_SHOW);
+        mSeason = bundle.getLong(EXTRA_SEASON);
+        mEpisode = bundle.getLong(EXTRA_EPISODE);
+    }
 
     public void onEpisodeLoaded(Episode episode){
+
         mTextView = (TextView) findViewById(R.id.episode_title);
         mTextView.setText(episode.title());
 
@@ -45,5 +69,8 @@ public class EpisodeDetailsActivity extends Activity implements EpisodeDetailsVi
                 .placeholder(R.drawable.show_item_placeholder)
                 .centerCrop()
                 .into(mImageView);
+
+        hideLoading();
     }
+
 }

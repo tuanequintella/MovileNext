@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.movile.next.seriestracker.activity.ShowDetailsActivity">
+
+    <ImageView
+        android:id="@+id/episode_screenshot"
+        android:src="@drawable/highlight_placeholder"
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        style="@style/AppTheme.EpisodeDetails.EpisodeScreenshot"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/show_details_content"
+        android:layout_below="@id/episode_screenshot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v4.view.PagerTabStrip
+            android:id="@+id/pager_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.v4.view.ViewPager>
+
+
+</RelativeLayout>

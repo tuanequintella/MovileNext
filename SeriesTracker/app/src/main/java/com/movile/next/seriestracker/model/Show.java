@@ -29,6 +29,10 @@ public class Show implements Serializable {
         return title;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     public Long year() {
         return year;
     }

@@ -8,14 +8,17 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.movile.next.seriestracker.R;
+import com.movile.next.seriestracker.listener.OnEpisodeClickListener;
 import com.movile.next.seriestracker.model.Episode;
-
-import java.util.ArrayList;
 
 public class EpisodeListAdapter extends ArrayAdapter<Episode> {
 
-    public EpisodeListAdapter(Context context, ArrayList<Episode> episodes) {
-        super(context, R.layout.season_item_list, episodes);
+    private OnEpisodeClickListener mListener;
+
+    public EpisodeListAdapter(Context context, OnEpisodeClickListener listener) {
+        super(context, R.layout.season_item_list, 0);
+
+        mListener = listener;
     }
 
     @Override
@@ -42,22 +45,32 @@ public class EpisodeListAdapter extends ArrayAdapter<Episode> {
 
     private void populateViewFromHolder(ViewHolder holder, int position) {
 
-        Episode ep = getItem(position);
-        holder.mEpisodeTitle.setText(ep.title());
-        holder.mEpisodeNumber.setText(ep.number().toString());
+        final Episode ep = getItem(position);
+
+        if (ep != null)
+        {
+            holder.mEpisodeTitle.setText(ep.title());
+            holder.mEpisodeNumber.setText(ep.number().toString());
+            holder.mRoot.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mListener.episodeClick(ep);
+                }
+            });
+        }
 
     }
 
     public static class ViewHolder {
 
+        View mRoot;
         TextView mEpisodeNumber;
         TextView mEpisodeTitle;
 
-
         public ViewHolder(View root) {
+            mRoot = root;
             mEpisodeNumber = (TextView) root.findViewById(R.id.episode_number_list);
             mEpisodeTitle = (TextView) root.findViewById(R.id.episode_title_list);
         }
-
     }
 }
