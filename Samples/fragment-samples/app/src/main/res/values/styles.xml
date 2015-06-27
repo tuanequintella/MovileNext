@@ -1,0 +1,24 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar"></style>
+
+    <style name="AppTheme.Navigation"></style>
+
+    <style name="AppTheme.Navigation.Container">
+        <item name="android:padding">@dimen/navigation_container_padding</item>
+    </style>
+
+    <style name="AppTheme.Content">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/content_textColor</item>
+    </style>
+
+    <style name="AppTheme.Content.First">
+        <item name="android:background">@color/first_content_background</item>
+    </style>
+
+    <style name="AppTheme.Content.Second">
+        <item name="android:background">@color/second_content_background</item>
+    </style>
+
+</resources>

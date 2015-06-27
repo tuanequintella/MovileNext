@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">RecyclerView Sample</string>
+
+    <string name="main_linear_vertical_recycler">Vertical Linear Recycler</string>
+    <string name="main_linear_horizontal_recycler">Horizontal Linear Recycler</string>
+    <string name="main_grid_recycler">Grid Recycler</string>
+
+</resources>

@@ -1,0 +1,5 @@
+<resources>
+
+    <dimen name="navigation_container_padding">8dp</dimen>
+
+</resources>

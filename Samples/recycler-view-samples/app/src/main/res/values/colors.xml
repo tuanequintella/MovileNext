@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="content_item_container_odd_background">#0288D1</color>
+    <color name="content_item_container_even_background">#0277BD</color>
+
+</resources>
