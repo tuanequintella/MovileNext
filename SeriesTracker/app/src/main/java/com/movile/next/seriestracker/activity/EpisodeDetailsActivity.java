@@ -20,10 +20,10 @@ public class EpisodeDetailsActivity extends Activity implements OnEpisodeLoadedL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.episode_details_activity);
         // LOCAL FETCH
-        new FetchLocalEpisodeDetails(this).execute(this);
+       // new FetchLocalEpisodeDetails(this).execute(this);
 
         // REMOTE FETCH
-        getLoaderManager().initLoader(0, null, new FetchRemoteEpisodeLoaderCallback(this)).forceLoad();
+        getLoaderManager().initLoader(0, null, new FetchRemoteEpisodeLoaderCallback(this, this)).forceLoad();
     }
 
 
