@@ -4,7 +4,7 @@
     tools:context="com.movile.next.seriestracker.activity.SeasonDetailsActivity">
 
     <ListView
-        android:id="@+id/season_listview"
+        android:id="@+id/season_details_listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 

@@ -22,4 +22,6 @@
     <!-- Base Loading -->
     <dimen name="base_loading_progress_size">48dp</dimen>
 
+    <dimen name="linear_horizontal_recycler_height">200dp</dimen>
+
 </resources>

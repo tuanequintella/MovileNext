@@ -9,11 +9,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.movile.next.seriestracker.R;
+import com.movile.next.seriestracker.model.Show;
 
 public class ShowInformationFragment extends Fragment {
 
-    public ShowInformationFragment() {
-        // Required empty public constructor
+    private Show mShow;
+
+    public ShowInformationFragment(Show show) {
+        mShow = show;
     }
 
     @Override

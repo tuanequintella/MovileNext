@@ -71,6 +71,17 @@
     <style name="AppTheme.SeasonDetails"></style>
 
 
+
+    <!-- Show Details -->
+    <style name="AppTheme.ShowDetails"></style>
+
+    <style name="AppTheme.ShowDetails.SeasonList"></style>
+
+    <style name="AppTheme.ShowDetails.SeasonList.ItemCard" parent="CardView">
+        <item name="android:layout_width">88dp</item>
+        <item name="android:layout_height">176dp</item>
+    </style>
+
     <!-- Base Navigation -->
     <style name="AppTheme.Base"></style>
     <style name="AppTheme.Base.Navigation"></style>

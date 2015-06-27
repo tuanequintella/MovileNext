@@ -29,7 +29,7 @@ public class SeasonDetailsActivity extends BaseNavigationToolbarActivity impleme
 
         View header = LayoutInflater.from(this).inflate(R.layout.season_details_header, null);
 
-        ListView view = (ListView) findViewById(R.id.season_listview);
+        ListView view = (ListView) findViewById(R.id.season_details_listview);
         view.addHeaderView(header, null, false);
 
         adapter = new EpisodeListAdapter(this, this);
