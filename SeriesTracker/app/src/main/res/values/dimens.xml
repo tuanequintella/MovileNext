@@ -14,6 +14,7 @@
     <dimen name="default_textSize_veryLarge">24sp</dimen>
 
     <dimen name="default_card_corner_radius">4dp</dimen>
+    <dimen name="default_card_corner_radius_small">2dp</dimen>
 
     <!-- Base Navigation Toolbar -->
     <dimen name="base_navigation_toolbar_height">56dp</dimen>

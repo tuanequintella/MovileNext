@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.movile.next.seriestracker.R;
@@ -50,6 +51,8 @@ public class SeasonListAdapter extends RecyclerView.Adapter<SeasonListAdapter.Vi
                 .placeholder(R.drawable.season_item_placeholder)
                 .centerCrop()
                 .into(holder.seasonScreenshot());
+        holder.seasonNumber().setText("Season " + season.number().toString());
+        holder.episodeCount().setText(season.episodeCount().toString() + " episodes");
         holder.root().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,11 +70,15 @@ public class SeasonListAdapter extends RecyclerView.Adapter<SeasonListAdapter.Vi
 
         private View mRoot;
         private ImageView mSeasonScreenshot;
+        private TextView mSeasonNumber;
+        private TextView mEpisodeCount;
 
         public ViewHolder(View view) {
             super(view);
             mRoot = view;
             mSeasonScreenshot = (ImageView) mRoot.findViewById(R.id.season_list_item_screenshot);
+            mSeasonNumber = (TextView) mRoot.findViewById(R.id.season_list_item_season_number);
+            mEpisodeCount = (TextView) mRoot.findViewById(R.id.season_list_item_episodes_count);
         }
 
         public View root() {
@@ -80,6 +87,12 @@ public class SeasonListAdapter extends RecyclerView.Adapter<SeasonListAdapter.Vi
 
         public ImageView seasonScreenshot() {
             return mSeasonScreenshot;
+        }
+        public TextView seasonNumber() {
+            return mSeasonNumber;
+        }
+        public TextView episodeCount() {
+            return mEpisodeCount;
         }
 
     }
