@@ -8,14 +8,14 @@ import com.movile.next.seriestracker.fragments.ShowInformationFragment;
 import com.movile.next.seriestracker.fragments.ShowSeasonsFragment;
 import com.movile.next.seriestracker.model.Show;
 
-public class ViewPagerAdapter extends FragmentPagerAdapter {
+public class ShowDetailsPagerAdapter extends FragmentPagerAdapter {
 
     public static final int INFO_TAB = 0;
     public static final int SEASONS_TAB = 1;
 
     private Show mShow;
 
-    public ViewPagerAdapter(FragmentManager fragmentManager, Show show) {
+    public ShowDetailsPagerAdapter(FragmentManager fragmentManager, Show show) {
         super(fragmentManager);
         mShow = show;
     }
