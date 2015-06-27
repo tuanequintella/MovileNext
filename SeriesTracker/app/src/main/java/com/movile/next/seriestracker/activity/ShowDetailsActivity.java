@@ -13,19 +13,26 @@ import com.movile.next.seriestracker.view.ShowDetailsView;
 
 public class ShowDetailsActivity extends BaseNavigationToolbarActivity implements ShowDetailsView, OnSeasonClickListener {
 
+    public static final String EXTRA_SHOW = "show";
     private ShowDetailsPresenter mPresenter;
     private ViewPager mContentPager;
-    private String show = "game-of-thrones";
+
+    String mShow = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.show_details_activity);
-
+        loadBundle();
         configureToolbar();
         showLoading();
         mPresenter = new ShowDetailsPresenter(this);
-        mPresenter.loadShowDetails(show);
+        mPresenter.loadShowDetails(mShow);
+    }
+
+    public void loadBundle() {
+        Bundle bundle = getIntent().getExtras();
+        mShow = bundle.getString(EXTRA_SHOW);
     }
 
     @Override

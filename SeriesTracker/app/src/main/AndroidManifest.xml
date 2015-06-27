@@ -20,6 +20,10 @@
         <activity
             android:name=".activity.ShowDetailsActivity"
             android:label="@string/title_activity_show_details" >
+        </activity>
+        <activity
+            android:name=".activity.ShowListActivity"
+            android:label="@string/title_activity_shows" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
