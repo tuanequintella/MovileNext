@@ -11,15 +11,18 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".activity.EpisodeDetailsActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:parentActivityName=".activity.SeasonDetailsActivity">
         </activity>
         <activity
             android:name=".activity.SeasonDetailsActivity"
-            android:label="@string/title_activity_season_details" >
+            android:label="@string/title_activity_season_details"
+            android:parentActivityName=".activity.ShowDetailsActivity">
         </activity>
         <activity
             android:name=".activity.ShowDetailsActivity"
-            android:label="@string/title_activity_show_details" >
+            android:label="@string/title_activity_show_details"
+            android:parentActivityName=".activity.ShowListActivity">
         </activity>
         <activity
             android:name=".activity.ShowListActivity"
@@ -30,6 +33,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".service.UpdatesService"
+            android:exported="false" >
+        </service>
+
+        <receiver
+            android:name=".receiver.UpdatesReceiver"
+            android:enabled="true"
+            android:exported="false" >
+
+            <intent-filter>
+                <action android:name="com.movile.next.seriestracker.action.UPDATES_RECEIVED" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
