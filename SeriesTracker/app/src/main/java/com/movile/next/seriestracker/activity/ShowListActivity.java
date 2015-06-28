@@ -20,7 +20,6 @@ import java.util.ArrayList;
 
 public class ShowListActivity extends BaseNavigationToolbarActivity implements ShowListView, OnShowClickListener {
 
-    private static final int UPDATE_INTERVAL = 60000;
     ShowListPresenter mPresenter;
     ShowListAdapter mAdapter;
 
@@ -39,8 +38,6 @@ public class ShowListActivity extends BaseNavigationToolbarActivity implements S
 
         configureToolbar();
 
-        startUpdateService();
-
         showLoading();
     }
 
@@ -57,12 +54,5 @@ public class ShowListActivity extends BaseNavigationToolbarActivity implements S
         Intent intent = new Intent(this, ShowDetailsActivity.class);
         intent.putExtra(EpisodeDetailsActivity.EXTRA_SHOW, show.ids().slug());
         startActivity(intent);
-    }
-
-    private void startUpdateService() {
-        //MADE WITH POOLING
-        PendingIntent pendingIntent = PendingIntent.getService(this, 0, new Intent(this, UpdatesService.class), 0);
-        AlarmManager manager = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
-        manager.setRepeating(AlarmManager.RTC_WAKEUP, 0, UPDATE_INTERVAL, pendingIntent);
     }
 }
