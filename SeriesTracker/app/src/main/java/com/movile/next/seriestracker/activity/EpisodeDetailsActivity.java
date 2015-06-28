@@ -19,8 +19,8 @@ import java.text.MessageFormat;
 public class EpisodeDetailsActivity extends BaseNavigationToolbarActivity implements EpisodeDetailsView {
 
     public static final String EXTRA_SHOW = "show";
-    public static final String EXTRA_SEASON = "1";
-    public static final String EXTRA_EPISODE = "1";
+    public static final String EXTRA_SEASON = "season";
+    public static final String EXTRA_EPISODE = "episode";
 
     EpisodeDetailsPresenter mPresenter;
     TextView mTextView;
@@ -42,7 +42,6 @@ public class EpisodeDetailsActivity extends BaseNavigationToolbarActivity implem
         mPresenter.loadEpisode(mShow, mSeason, mEpisode);
 
         configureToolbar();
-        getSupportActionBar().setTitle(MessageFormat.format("Episode {0}", mEpisode));
         showLoading();
     }
 
@@ -51,6 +50,8 @@ public class EpisodeDetailsActivity extends BaseNavigationToolbarActivity implem
         mShow = bundle.getString(EXTRA_SHOW);
         mSeason = bundle.getLong(EXTRA_SEASON);
         mEpisode = bundle.getLong(EXTRA_EPISODE);
+
+        getSupportActionBar().setTitle(MessageFormat.format("Episode {0}", mEpisode));
     }
 
     public void onEpisodeLoaded(Episode episode){

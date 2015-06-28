@@ -1,5 +1,6 @@
 package com.movile.next.seriestracker.activity;
 
+import android.content.Intent;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import com.movile.next.seriestracker.R;
@@ -14,10 +15,12 @@ import com.movile.next.seriestracker.view.ShowDetailsView;
 public class ShowDetailsActivity extends BaseNavigationToolbarActivity implements ShowDetailsView, OnSeasonClickListener {
 
     public static final String EXTRA_SHOW = "show";
+    public static final String EXTRA_SEASON = "season";
     private ShowDetailsPresenter mPresenter;
     private ViewPager mContentPager;
 
-    String mShow = "";
+    String mShowSlug = "";
+    Show mShow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,24 +30,29 @@ public class ShowDetailsActivity extends BaseNavigationToolbarActivity implement
         configureToolbar();
         showLoading();
         mPresenter = new ShowDetailsPresenter(this);
-        mPresenter.loadShowDetails(mShow);
+        mPresenter.loadShowDetails(mShowSlug);
     }
 
     public void loadBundle() {
         Bundle bundle = getIntent().getExtras();
-        mShow = bundle.getString(EXTRA_SHOW);
+        mShowSlug = bundle.getString(EXTRA_SHOW);
     }
 
     @Override
     public void onShowLoaded(Show show) {
         hideLoading();
         getSupportActionBar().setTitle(show.title());
+        //set show screenshot
+        mShow = show;
         mContentPager = (ViewPager) findViewById(R.id.show_details_content);
-        mContentPager.setAdapter(new ShowDetailsPagerAdapter(getSupportFragmentManager(), show, this));
+        mContentPager.setAdapter(new ShowDetailsPagerAdapter(getSupportFragmentManager(), mShow, this));
     }
 
     @Override
     public void seasonClick(Season season) {
-        //entrar na season
+        Intent intent = new Intent(this, SeasonDetailsActivity.class);
+        intent.putExtra(EXTRA_SHOW, mShowSlug);
+        intent.putExtra(EXTRA_SEASON, season.number());
+        startActivity(intent);
     }
 }
