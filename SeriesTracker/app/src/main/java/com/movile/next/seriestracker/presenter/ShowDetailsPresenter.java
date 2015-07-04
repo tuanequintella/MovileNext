@@ -29,11 +29,11 @@ public class ShowDetailsPresenter implements ShowCallback, FavoriteShowCallback 
     }
 
     public void checkFavoriteStatus(String show) {
-        new CheckFavoriteShowAsyncTask(mContext, show, this);
+        new CheckFavoriteShowAsyncTask(mContext, show, this).execute();
     }
 
     public void toggleFavoriteStatus(Show show) {
-        new ToggleFavoriteShowAsyncTask(mContext, show, this);
+        new ToggleFavoriteShowAsyncTask(mContext, show, this).execute();
     }
 
     @Override

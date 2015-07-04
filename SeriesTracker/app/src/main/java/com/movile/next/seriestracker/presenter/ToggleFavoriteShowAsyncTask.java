@@ -4,7 +4,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 
 import com.movile.next.seriestracker.callbacks.FavoriteShowCallback;
-import com.movile.next.seriestracker.database.manual.dao.FavoriteDAO;
+import com.movile.next.seriestracker.database.dbflow.dao.FavoriteDAO;
 import com.movile.next.seriestracker.model.Favorite;
 import com.movile.next.seriestracker.model.Show;
 
@@ -25,7 +25,7 @@ public class ToggleFavoriteShowAsyncTask extends AsyncTask {
 
     @Override
     protected Object doInBackground(Object[] params) {
-        FavoriteDAO dao = new FavoriteDAO(mContext);
+        FavoriteDAO dao = new FavoriteDAO();
         Favorite favorite = dao.find(mShow.ids().slug());
 
         if(favorite == null) {
