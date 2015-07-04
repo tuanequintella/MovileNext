@@ -1,21 +1,21 @@
 package com.movile.next.seriestracker.presenter;
 
-import com.movile.next.seriestracker.callbacks.SeasonListCallback;
+import android.content.Context;
+
+import com.movile.next.seriestracker.callbacks.FavoriteShowCallback;
 import com.movile.next.seriestracker.callbacks.ShowCallback;
-import com.movile.next.seriestracker.model.Season;
 import com.movile.next.seriestracker.model.Show;
 import com.movile.next.seriestracker.remote.ApiConfiguration;
 import com.movile.next.seriestracker.remote.client.FetchRemoteShowDetailsClient;
 import com.movile.next.seriestracker.view.ShowDetailsView;
 
-import java.util.List;
 
-
-public class ShowDetailsPresenter implements ShowCallback{
-
+public class ShowDetailsPresenter implements ShowCallback, FavoriteShowCallback {
+    Context mContext;
     ShowDetailsView mView;
 
-    public ShowDetailsPresenter(ShowDetailsView view) {
+    public ShowDetailsPresenter(Context context, ShowDetailsView view) {
+        mContext = context;
         mView = view;
     }
 
@@ -26,5 +26,18 @@ public class ShowDetailsPresenter implements ShowCallback{
     @Override
     public void showLoadedCallback(Show show) {
         mView.onShowLoaded(show);
+    }
+
+    public void checkFavoriteStatus(String show) {
+        new CheckFavoriteShowAsyncTask(mContext, show, this);
+    }
+
+    public void toggleFavoriteStatus(Show show) {
+        new ToggleFavoriteShowAsyncTask(mContext, show, this);
+    }
+
+    @Override
+    public void setFavorite(boolean isFav) {
+        mView.setFavorite(isFav);
     }
 }

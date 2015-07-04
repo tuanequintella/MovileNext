@@ -75,6 +75,10 @@
     <!-- Show Details -->
     <style name="AppTheme.ShowDetails"></style>
 
+    <style name="AppTheme.ShowDetails.FavoriteButton">
+        <item name="android:layout_margin">@dimen/default_spacing_large</item>
+    </style>
+
     <style name="AppTheme.ShowDetails.SeasonList"></style>
 
     <style name="AppTheme.ShowDetails.SeasonList.ItemCard" parent="CardView">

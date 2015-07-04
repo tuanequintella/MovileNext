@@ -1,8 +1,11 @@
 package com.movile.next.seriestracker.activity;
 
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.view.View;
+
 import com.movile.next.seriestracker.R;
 import com.movile.next.seriestracker.activity.base.BaseNavigationToolbarActivity;
 import com.movile.next.seriestracker.adapter.ShowDetailsPagerAdapter;
@@ -21,16 +24,19 @@ public class ShowDetailsActivity extends BaseNavigationToolbarActivity implement
 
     String mShowSlug = "";
     Show mShow;
+    FloatingActionButton mFavoriteView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.show_details_activity);
+        configureFavoriteButton();
         loadBundle();
         configureToolbar();
         showLoading();
-        mPresenter = new ShowDetailsPresenter(this);
+        mPresenter = new ShowDetailsPresenter(this, this);
         mPresenter.loadShowDetails(mShowSlug);
+        mPresenter.checkFavoriteStatus(mShowSlug);
     }
 
     public void loadBundle() {
@@ -54,5 +60,27 @@ public class ShowDetailsActivity extends BaseNavigationToolbarActivity implement
         intent.putExtra(EXTRA_SHOW, mShowSlug);
         intent.putExtra(EXTRA_SEASON, season.number());
         startActivity(intent);
+    }
+
+    @Override
+    public void setFavorite(boolean isFav) {
+        FloatingActionButton favoriteView = (FloatingActionButton) findViewById(R.id.show_details_favorite_button);
+        if(isFav) {
+            favoriteView.setImageResource(R.drawable.show_details_favorite_on);
+            favoriteView.setBackgroundTintList(getResources().getColorStateList(R.color.default_color_second));
+        } else {
+            favoriteView.setImageResource(R.drawable.show_details_favorite_off);
+            favoriteView.setBackgroundTintList(getResources().getColorStateList(R.color.default_color_third));
+        }
+    }
+
+    private void configureFavoriteButton() {
+        mFavoriteView = (FloatingActionButton) findViewById(R.id.show_details_favorite_button);
+        mFavoriteView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mPresenter.toggleFavoriteStatus(mShow);
+            }
+        });
     }
 }
