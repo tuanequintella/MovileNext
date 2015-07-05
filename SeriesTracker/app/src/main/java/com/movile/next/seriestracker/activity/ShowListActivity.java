@@ -1,24 +1,20 @@
 package com.movile.next.seriestracker.activity;
 
-import android.app.AlarmManager;
-import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.GridView;
 
 import com.movile.next.seriestracker.R;
-import com.movile.next.seriestracker.activity.base.BaseNavigationToolbarActivity;
+import com.movile.next.seriestracker.activity.base.BaseNavigationDrawerActivity;
 import com.movile.next.seriestracker.adapter.ShowListAdapter;
 import com.movile.next.seriestracker.listener.OnShowClickListener;
 import com.movile.next.seriestracker.model.Show;
 import com.movile.next.seriestracker.presenter.ShowListPresenter;
-import com.movile.next.seriestracker.service.UpdatesService;
 import com.movile.next.seriestracker.view.ShowListView;
 
 import java.util.ArrayList;
 
-public class ShowListActivity extends BaseNavigationToolbarActivity implements ShowListView, OnShowClickListener {
+public class ShowListActivity extends BaseNavigationDrawerActivity implements ShowListView, OnShowClickListener {
 
     ShowListPresenter mPresenter;
     ShowListAdapter mAdapter;
@@ -36,7 +32,7 @@ public class ShowListActivity extends BaseNavigationToolbarActivity implements S
         mPresenter = new ShowListPresenter(this);
         mPresenter.loadShowList();
 
-        configureToolbar();
+        configureNavigation();
 
         showLoading();
     }

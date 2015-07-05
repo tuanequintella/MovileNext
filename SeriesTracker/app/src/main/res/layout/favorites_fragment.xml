@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.movile.next.seriestracker.fragments.FavoritesFragment">
+
+    <FrameLayout
+        android:id="@+id/drawer_header"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@color/default_background_fourth">
+
+        <ImageView
+            android:id="@+id/drawer_header_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/favorites_header_tv_unhappy"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:textColor="@color/default_textColor_first"
+            android:textSize="@dimen/default_textSize_large"
+            android:text="Favorite Shows"/>
+
+    </FrameLayout>
+
+    
+    <ListView
+        android:id="@+id/favorites_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/drawer_header">
+
+    </ListView>
+
+</RelativeLayout>

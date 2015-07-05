@@ -17,7 +17,7 @@
         android:layout_width="@dimen/abc_action_button_min_width_material"
         android:layout_height="@dimen/abc_action_button_min_width_material"
         android:src="@drawable/show_details_favorite_off"
-        style="@style/AppTheme.ShowDetails.FavoriteButton"/>
+        style="@style/AppTheme.ShowDetails.FavoriteButton" />
 
 
     <android.support.v4.view.ViewPager
