@@ -1,4 +1,4 @@
-package com.movile.next.seriestracker.presenter;
+package com.movile.next.seriestracker.loaders;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -6,38 +6,25 @@ import android.os.AsyncTask;
 import com.movile.next.seriestracker.callbacks.FavoriteShowCallback;
 import com.movile.next.seriestracker.database.dbflow.dao.FavoriteDAO;
 import com.movile.next.seriestracker.model.Favorite;
-import com.movile.next.seriestracker.model.Show;
 
 /**
  * Created by movile on 04/07/15.
  */
 
-public class ToggleFavoriteShowAsyncTask extends AsyncTask {
+public class CheckFavoriteShowAsyncTask extends AsyncTask {
     FavoriteShowCallback mCallback;
-    Show mShow;
+    String mShowSlug;
     Context mContext;
 
-    public ToggleFavoriteShowAsyncTask(Context context, Show show, FavoriteShowCallback callback) {
+    public CheckFavoriteShowAsyncTask(Context context, String showSlug, FavoriteShowCallback callback) {
         mContext = context;
-        mShow = show;
+        mShowSlug = showSlug;
         mCallback = callback;
     }
 
     @Override
     protected Object doInBackground(Object[] params) {
-        FavoriteDAO dao = new FavoriteDAO();
-        Favorite favorite = dao.find(mShow.ids().slug());
-
-        if(favorite == null) {
-           favorite = new Favorite(mShow.ids().slug(), mShow.title());
-            //insert
-            dao.save(favorite);
-        } else {
-            //delete
-            dao.delete(favorite);
-            favorite = null;
-        }
-
+        Favorite favorite = new FavoriteDAO().find(mShowSlug);
         return favorite;
     }
 

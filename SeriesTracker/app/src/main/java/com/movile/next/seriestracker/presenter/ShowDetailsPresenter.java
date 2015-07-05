@@ -4,6 +4,8 @@ import android.content.Context;
 
 import com.movile.next.seriestracker.callbacks.FavoriteShowCallback;
 import com.movile.next.seriestracker.callbacks.ShowCallback;
+import com.movile.next.seriestracker.loaders.CheckFavoriteShowAsyncTask;
+import com.movile.next.seriestracker.loaders.ToggleFavoriteShowAsyncTask;
 import com.movile.next.seriestracker.model.Show;
 import com.movile.next.seriestracker.remote.ApiConfiguration;
 import com.movile.next.seriestracker.remote.client.FetchRemoteShowDetailsClient;
