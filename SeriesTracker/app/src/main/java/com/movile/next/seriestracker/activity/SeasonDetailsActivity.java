@@ -13,7 +13,6 @@ import com.movile.next.seriestracker.activity.base.BaseNavigationToolbarActivity
 import com.movile.next.seriestracker.adapter.EpisodeListAdapter;
 import com.movile.next.seriestracker.listener.OnEpisodeClickListener;
 import com.movile.next.seriestracker.model.Episode;
-import com.movile.next.seriestracker.model.Season;
 import com.movile.next.seriestracker.presenter.SeasonDetailsPresenter;
 import com.movile.next.seriestracker.view.SeasonDetailsView;
 
