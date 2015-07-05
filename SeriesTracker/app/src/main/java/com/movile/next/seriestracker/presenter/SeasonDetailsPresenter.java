@@ -22,11 +22,6 @@ public class SeasonDetailsPresenter implements SeasonEpisodeListCallback {
                 .getEpisodeList(show, season);
     }
 
-    public void mockLoadEpisodesFromSeason(){
-        new FetchRemoteEpisodeListClient(ApiConfiguration.API_URL_BASE, this)
-                .mockGetEpisodeList();
-    }
-
     @Override
     public void onSeasonLoadedCallback(ArrayList<Episode> episodeList) {
         mView.onSeasonLoaded(episodeList);

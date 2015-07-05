@@ -1,7 +1,5 @@
 package com.movile.next.seriestracker.fragments;
 
-import android.app.Activity;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -22,8 +20,13 @@ public class ShowInformationFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        setShowDetailsInfo();
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.show_information_fragment, container, false);
+    }
+
+    private void setShowDetailsInfo() {
+        //TODO: set show details info on TextViews
     }
 
 }

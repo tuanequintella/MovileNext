@@ -5,7 +5,9 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.movile.next.seriestracker.R;
 import com.movile.next.seriestracker.activity.base.BaseNavigationToolbarActivity;
 import com.movile.next.seriestracker.adapter.ShowDetailsPagerAdapter;
@@ -48,7 +50,9 @@ public class ShowDetailsActivity extends BaseNavigationToolbarActivity implement
     public void onShowLoaded(Show show) {
         hideLoading();
         getSupportActionBar().setTitle(show.title());
-        //set show screenshot
+        ImageView showScreenshot = (ImageView) findViewById(R.id.show_screenshot);
+        //Glide.with(this).load(show.images().poster()).centerCrop().into(showScreenshot);
+
         mShow = show;
         mContentPager = (ViewPager) findViewById(R.id.show_details_content);
         mContentPager.setAdapter(new ShowDetailsPagerAdapter(getSupportFragmentManager(), mShow, this));
