@@ -1,0 +1,12 @@
+<resources>
+
+    <string name="app_name">Fragment Samples - Movile Up</string>
+
+    <string name="navigation_first_content_label">Content 1</string>
+    <string name="navigation_second_content_label">Content 2</string>
+    <string name="navigation_clear_label">Clear</string>
+
+    <string name="first_content_text">This is the first content</string>
+    <string name="second_content_text">This is the second content</string>
+
+</resources>

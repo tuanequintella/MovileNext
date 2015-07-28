@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_item_container"
+    android:orientation="vertical"
+    style="@style/AppTheme.ContentItem.Linear.Horizontal.Container">
+
+    <TextView
+        android:id="@+id/content_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TITLE"
+        style="@style/AppTheme.ContentItem.Title" />
+
+    <TextView
+        android:id="@+id/content_item_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DESCRIPTION"
+        style="@style/AppTheme.ContentItem.Description" />
+
+</LinearLayout>

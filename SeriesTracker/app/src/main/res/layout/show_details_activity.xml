@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.movile.next.seriestracker.activity.ShowDetailsActivity">
+
+    <ImageView
+        android:id="@+id/show_screenshot"
+        android:src="@drawable/highlight_placeholder"
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        style="@style/AppTheme.EpisodeDetails.EpisodeScreenshot"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/show_details_favorite_button"
+        android:layout_alignBottom="@id/show_screenshot"
+        android:layout_alignRight="@id/show_screenshot"
+        android:layout_width="@dimen/abc_action_button_min_width_material"
+        android:layout_height="@dimen/abc_action_button_min_width_material"
+        android:src="@drawable/show_details_favorite_off"
+        style="@style/AppTheme.ShowDetails.FavoriteButton" />
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/show_details_content"
+        android:layout_below="@id/show_screenshot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v4.view.PagerTabStrip
+            android:id="@+id/pager_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.v4.view.ViewPager>
+
+
+</RelativeLayout>

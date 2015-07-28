@@ -17,6 +17,14 @@ public class Episode {
     private String[] translations;
     private Images images;
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setNumber(Long number) {
+        this.number = number;
+    }
+
     public Long season() {
         return season;
     }
