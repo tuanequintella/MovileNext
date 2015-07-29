@@ -11,7 +11,6 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.movile.next.seriestracker.R;
-import com.movile.next.seriestracker.activity.base.BaseNavigationDrawerActivity;
 import com.movile.next.seriestracker.activity.base.BaseNavigationToolbarActivity;
 import com.movile.next.seriestracker.adapter.ShowDetailsPagerAdapter;
 import com.movile.next.seriestracker.listener.OnSeasonClickListener;
@@ -54,13 +53,14 @@ public class ShowDetailsActivity extends BaseNavigationToolbarActivity implement
     public void onShowLoaded(Show show) {
         hideLoading();
         getSupportActionBar().setTitle(show.title());
+        mShow = show;
+
         ImageView showScreenshot = (ImageView) findViewById(R.id.show_screenshot);
-        Glide.with(this).load(show.images().banner().get(Images.ImageSize.MEDIUM))
+        Glide.with(this).load(mShow.images().poster().get(Images.ImageSize.MEDIUM))
                 .placeholder(R.drawable.show_item_placeholder)
                 .centerCrop()
                 .into(showScreenshot);
 
-        mShow = show;
         mContentPager = (ViewPager) findViewById(R.id.show_details_content);
         mContentPager.setAdapter(new ShowDetailsPagerAdapter(getSupportFragmentManager(), mShow, this));
     }

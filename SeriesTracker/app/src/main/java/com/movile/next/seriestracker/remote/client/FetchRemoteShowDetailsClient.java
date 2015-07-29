@@ -41,7 +41,7 @@ public class FetchRemoteShowDetailsClient {
 
             @Override
             public void failure(RetrofitError error) {
-                Log.e(TAG, "Error fetching episode");
+                Log.e(TAG, "Error fetching show details");
             }
         });
     }
@@ -57,7 +57,7 @@ public class FetchRemoteShowDetailsClient {
 
             @Override
             public void failure(RetrofitError error) {
-                Log.e(TAG, "Error fetching episode");
+                Log.e(TAG, "Error fetching season list");
             }
         });
     }
