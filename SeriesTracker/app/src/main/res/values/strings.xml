@@ -7,19 +7,43 @@
     <string name="base_navigation_drawer_open">Open</string>
     <string name="base_navigation_drawer_close">Close</string>
 
-    <string name="episode_title">Some episode name as a placeholder here</string>
-    <string name="episode_datetime">2015-04-22 at 22:00</string>
-    <string name="episode_summary_title">Summary</string>
-    <string name="episode_summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum purus vel mollis interdum. Ut ut enim eget sem porttitor fermentum quis vitae massa. In ac diam justo. Nunc pellentesque lectus et ligula pretium porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur ut ante rhoncus, vehicula mauris sit amet, lobortis erat. Morbi sagittis dui dictum, consectetur eros ut, dapibus dolor. Mauris ante nulla, feugiat eget elementum non, aliquam eu libero. Nam lacinia condimentum elit, non feugiat urna elementum id. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus tortor, efficitur sed libero id, lobortis pellentesque velit. Aliquam at tortor fringilla, finibus diam sit amet, consectetur elit.</string>
+    <!-- Activity titles -->
+    <string name="title_activity_shows">Shows</string>
     <string name="title_activity_season_details">SeasonDetailsActivity</string>
-
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
     <string name="title_activity_show_details">ShowDetailsActivity</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment 1</string>
-    <string name="hello_blank_fragment2">Hello blank fragment 2</string>
-    <string name="title_activity_shows">ShowsActivity</string>
+    <!-- General strings -->
+    <string name="summary_label">Summary</string>
+    <string name="details_label">Details</string>
+    <string name="settings_label">Settings</string>
+
+    <string name="text_placeholder">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum purus vel mollis interdum. Ut ut enim eget sem porttitor fermentum quis vitae massa. In ac diam justo. Nunc pellentesque lectus et ligula pretium porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur ut ante rhoncus, vehicula mauris sit amet, lobortis erat. Morbi sagittis dui dictum, consectetur eros ut, dapibus dolor. Mauris ante nulla, feugiat eget elementum non, aliquam eu libero. Nam lacinia condimentum elit, non feugiat urna elementum id. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus tortor, efficitur sed libero id, lobortis pellentesque velit. Aliquam at tortor fringilla, finibus diam sit amet, consectetur elit.</string>
+
+    <!-- Episode -->
+    <string name="episode_title_placeholder">(No episode name)</string>
+    <string name="episode_datetime_placeholder">1900-01-01 at 00:00</string>
+
+    <!-- Season -->
+
+
+    <!-- Show -->
+    <string name="genres_label">Genres</string>
+    <string name="network_label">Network:</string>
+    <string name="status_label">Status:</string>
+    <string name="episodes_label">Episodes:</string>
+    <string name="year_label">Year:</string>
+    <string name="country_label">Country:</string>
+    <string name="language_label">Language:</string>
+
+    <string name="genre_placeholder">Unknown</string>
+    <string name="network_placeholder">No network info available</string>
+    <string name="status_placeholder">No status available</string>
+    <string name="episodes_placeholder"># episodes</string>
+    <string name="year_placeholder">No year info available</string>
+    <string name="country_placeholder">No country info available</string>
+    <string name="language_placeholder">No language info available</string>
+
+
 
     <!-- TO BE CONTINUED -->
 

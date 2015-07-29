@@ -12,6 +12,84 @@
         <item name="android:windowBackground">@color/theme_windowBackground</item>
     </style>
 
+    <style name="AppTheme.Card" parent="CardView">
+        <item name="cardCornerRadius">@dimen/default_card_corner_radius</item>
+        <item name="android:background">@color/default_background_second</item>
+        <item name="android:layout_marginRight">@dimen/default_spacing_large</item>
+        <item name="android:layout_marginLeft">@dimen/default_spacing_large</item>
+        <item name="android:layout_marginTop">@dimen/default_spacing_small</item>
+        <item name="android:layout_marginBottom">@dimen/default_spacing_small</item>
+    </style>
+
+    <style name="AppTheme.Card.Content" parent="CardView">
+        <item name="android:layout_margin">@dimen/default_spacing_large</item>
+    </style>
+
+    <style name="AppTheme.CardText">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/default_textColor_fourth</item>
+    </style>
+
+    <style name="AppTheme.CardText.ItemLabel">
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginRight">@dimen/default_spacing_small</item>
+        <item name="android:layout_marginBottom">@dimen/default_spacing_small</item>
+    </style>
+
+    <style name="AppTheme.CardSeparator">
+        <item name="android:background">@color/default_background_third</item>
+        <item name="android:layout_marginBottom">@dimen/default_spacing_medium</item>
+    </style>
+
+    <style name="AppTheme.CardTitle">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/default_textColor_third</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_marginBottom">@dimen/default_spacing_small</item>
+    </style>
+
+
+    <!-- Base Navigation -->
+    <style name="AppTheme.Base"></style>
+    <style name="AppTheme.Base.Navigation"></style>
+
+    <style name="AppTheme.Base.Navigation.Toolbar">
+        <item name="android:layout_height">@dimen/base_navigation_toolbar_height</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:minHeight">@dimen/base_navigation_toolbar_minHeight</item>
+        <item name="android:background">@color/base_navigation_toolbar_background</item>
+    </style>
+
+    <style name="AppTheme.Base.Navigation.Toolbar.Transparent">
+        <item name="android:background">@color/base_navigation_toolbar_transparent_background</item>
+    </style>
+
+    <style name="AppTheme.Base.Navigation.Drawer"></style>
+
+    <style name="AppTheme.Base.Navigation.Drawer.Content">
+        <item name="android:layout_width">@dimen/base_navigation_drawer_content_width</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">left</item>
+        <item name="android:background">@color/base_navigation_drawer_content_background</item>
+    </style>
+
+
+    <!-- Base Loading -->
+    <style name="AppTheme.Base.Loading"></style>
+
+    <style name="AppTheme.Base.Loading.Container">
+        <item name="android:background">@color/base_loading_container_background</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="AppTheme.Base.Loading.Progress">
+        <item name="android:layout_width">@dimen/base_loading_progress_size</item>
+        <item name="android:layout_height">@dimen/base_loading_progress_size</item>
+        <item name="android:indeterminate">true</item>
+    </style>
+
+
     <!-- Episode Details -->
     <style name="AppTheme.EpisodeDetails"></style>
 
@@ -29,19 +107,6 @@
         <item name="android:ellipsize">end</item>
     </style>
 
-    <style name="AppTheme.EpisodeDetails.Card" parent="CardView">
-        <item name="cardCornerRadius">@dimen/default_card_corner_radius</item>
-        <item name="android:background">@color/default_background_second</item>
-        <item name="android:layout_marginRight">@dimen/default_spacing_large</item>
-        <item name="android:layout_marginLeft">@dimen/default_spacing_large</item>
-        <item name="android:layout_marginTop">@dimen/default_spacing_small</item>
-        <item name="android:layout_marginBottom">@dimen/default_spacing_small</item>
-    </style>
-
-    <style name="AppTheme.EpisodeDetails.Card.Content" parent="CardView">
-        <item name="android:layout_margin">@dimen/default_spacing_large</item>
-    </style>
-
     <style name="AppTheme.EpisodeDetails.DatetimeText">
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="android:textSize">16dp</item>
@@ -49,34 +114,22 @@
         <item name="android:layout_marginLeft">@dimen/default_spacing_large</item>
     </style>
 
-    <style name="AppTheme.EpisodeDetails.SummaryTitle">
-        <item name="android:fontFamily">sans-serif-medium</item>
-        <item name="android:textSize">12dp</item>
-        <item name="android:textColor">@color/default_textColor_third</item>
-        <item name="android:textAllCaps">true</item>
-        <item name="android:layout_marginBottom">@dimen/default_spacing_medium</item>
-    </style>
-
-    <style name="AppTheme.EpisodeDetails.Summary">
-        <item name="android:textSize">16dp</item>
-        <item name="android:textColor">@color/default_textColor_fourth</item>
-    </style>
-
-    <style name="AppTheme.EpisodeDetails.Separator">
-        <item name="android:background">@color/default_background_third</item>
-        <item name="android:layout_marginBottom">@dimen/default_spacing_medium</item>
-    </style>
-
     <!-- Season Details -->
     <style name="AppTheme.SeasonDetails"></style>
-
-
 
     <!-- Show Details -->
     <style name="AppTheme.ShowDetails"></style>
 
     <style name="AppTheme.ShowDetails.FavoriteButton">
         <item name="android:layout_margin">@dimen/default_spacing_large</item>
+    </style>
+
+    <style name="AppTheme.ShowDetails.GenreText">
+        <item name="android:background">@drawable/show_information_genre</item>
+        <item name="android:layout_marginLeft">@dimen/default_spacing_small</item>
+        <item name="android:layout_marginRight">@dimen/default_spacing_small</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/default_textColor_first</item>
     </style>
 
     <style name="AppTheme.ShowDetails.SeasonList"></style>
@@ -105,6 +158,7 @@
         <item name="android:textColor">@color/default_textColor_fifth</item>
     </style>
 
+
     <!-- Shows -->
     <style name="AppTheme.Grid">
         <item name="android:numColumns">auto_fit</item>
@@ -116,47 +170,5 @@
         <item name="android:paddingBottom">@dimen/default_spacing_medium</item>
         <item name="android:clipToPadding">false</item>
     </style>
-
-    <!-- Base Navigation -->
-    <style name="AppTheme.Base"></style>
-    <style name="AppTheme.Base.Navigation"></style>
-
-    <style name="AppTheme.Base.Navigation.Toolbar">
-        <item name="android:layout_height">@dimen/base_navigation_toolbar_height</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:minHeight">@dimen/base_navigation_toolbar_minHeight</item>
-        <item name="android:background">@color/base_navigation_toolbar_background</item>
-    </style>
-
-    <style name="AppTheme.Base.Navigation.Toolbar.Transparent">
-        <item name="android:background">@color/base_navigation_toolbar_transparent_background</item>
-    </style>
-
-
-    <style name="AppTheme.Base.Navigation.Drawer"></style>
-
-    <style name="AppTheme.Base.Navigation.Drawer.Content">
-        <item name="android:layout_width">@dimen/base_navigation_drawer_content_width</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:layout_gravity">left</item>
-        <item name="android:background">@color/base_navigation_drawer_content_background</item>
-    </style>
-
-
-
-    <!-- Base Loading -->
-    <style name="AppTheme.Base.Loading"></style>
-
-    <style name="AppTheme.Base.Loading.Container">
-        <item name="android:background">@color/base_loading_container_background</item>
-        <item name="android:clickable">true</item>
-    </style>
-
-    <style name="AppTheme.Base.Loading.Progress">
-        <item name="android:layout_width">@dimen/base_loading_progress_size</item>
-        <item name="android:layout_height">@dimen/base_loading_progress_size</item>
-        <item name="android:indeterminate">true</item>
-    </style>
-
 
 </resources>

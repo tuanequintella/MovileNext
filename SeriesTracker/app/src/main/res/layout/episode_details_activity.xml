@@ -22,7 +22,7 @@
             android:scaleType="fitXY" />
 
         <TextView android:id="@+id/episode_title"
-            android:text="@string/episode_title"
+            android:text="@string/episode_title_placeholder"
             style="@style/AppTheme.EpisodeDetails.EpisodeTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/episode_datetime_card"
-            style="@style/AppTheme.EpisodeDetails.Card"
+            style="@style/AppTheme.Card"
             android:layout_below="@+id/episode_screenshot"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center|start"
-                style="@style/AppTheme.EpisodeDetails.Card.Content">
+                style="@style/AppTheme.Card.Content">
 
                 <ImageView
                     android:id="@+id/episode_details_clock"
@@ -50,7 +50,7 @@
                     android:layout_height="match_parent" />
 
                 <TextView android:id="@+id/episode_datetime"
-                    android:text="@string/episode_datetime"
+                    android:text="@string/episode_datetime_placeholder"
                     style="@style/AppTheme.EpisodeDetails.DatetimeText"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -61,7 +61,7 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/episode_summary_card"
-            style="@style/AppTheme.EpisodeDetails.Card"
+            style="@style/AppTheme.Card"
             android:layout_below="@+id/episode_datetime_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -71,24 +71,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                style="@style/AppTheme.EpisodeDetails.Card.Content">
+                style="@style/AppTheme.Card.Content">
 
                 <TextView
-                    android:text="@string/episode_summary_title"
+                    android:text="@string/summary_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    style="@style/AppTheme.EpisodeDetails.SummaryTitle" />
+                    style="@style/AppTheme.CardTitle" />
                 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    style="@style/AppTheme.EpisodeDetails.Separator" />
+                    style="@style/AppTheme.CardSeparator" />
 
                 <TextView android:id="@+id/episode_summary"
-                    android:text="@string/episode_summary"
+                    android:text="@string/text_placeholder"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    style="@style/AppTheme.EpisodeDetails.Summary" />
+                    style="@style/AppTheme.CardText" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
